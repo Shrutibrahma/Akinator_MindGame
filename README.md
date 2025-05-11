@@ -159,30 +159,8 @@ rm char.json q_table.json game_stats.json  # On Mac/Linux
 
 ---
 
-## 👩‍💻 Contributing
-
-If you'd like to add features or fix bugs:
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature-name`)
-3. Make your changes
-4. Commit and push (`git push origin feature-name`)
-5. Submit a pull request
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](https://opensource.org/licenses/MIT).
-
----
-
 ## 🙋‍♀️ Created by
 
 **Shruti Brahma**
 Made with ❤️ to help machines guess your thoughts.
 
-```
-
-Let me know if you'd like to include example screenshots or demo links next!
-```
