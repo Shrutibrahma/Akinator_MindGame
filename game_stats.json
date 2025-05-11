@@ -1,7 +1,64 @@
 [
   {
-    "timestamp": "2025-04-18T22:46:54.938428",
-    "questions": 8,
-    "result": null
+    "timestamp": "2025-05-02T21:42:26.555275",
+    "answers": {
+      "magic": true,
+      "fame": false,
+      "combat": false,
+      "leader": false,
+      "science": false,
+      "animal": false
+    },
+    "guess": "Merlin"
+  },
+  {
+    "timestamp": "2025-05-02T21:42:31.575288",
+    "answers": {
+      "magic": true,
+      "fame": false,
+      "combat": false,
+      "leader": false,
+      "science": false,
+      "animal": false
+    },
+    "guess": "Merlin"
+  },
+  {
+    "timestamp": "2025-05-02T21:43:05.255927",
+    "answers": {
+      "magic": true,
+      "fame": false,
+      "combat": true,
+      "leader": false,
+      "science": false,
+      "animal": false
+    },
+    "guess": "Harry Potter"
+  },
+  {
+    "timestamp": "2025-05-02T21:44:13.288993",
+    "answers": {
+      "magic": true,
+      "fame": false,
+      "combat": true,
+      "leader": false,
+      "science": false,
+      "animal": false,
+      "bollywood": true
+    },
+    "guess": "Harry Potter"
+  },
+  {
+    "timestamp": "2025-05-02T23:55:43.518872",
+    "answers": {
+      "magic": true,
+      "fame": false,
+      "combat": true,
+      "leader": false,
+      "science": false,
+      "animal": false,
+      "bollywood": false
+    },
+    "guess": "Harry Potter"
   }
 ]
