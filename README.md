@@ -1,8 +1,8 @@
 # Akinator Mind Game
 HI USER! Meet Akinator - a mind reading game. 
 You think of a character. The Akinator ask yes-or-no questions. Then it tries to guess who it is. If I'm wrong, you can tell me. I get better each time.
-How It Works
 
+How It Works
 Think of a character.
 Answer questions about their traits(like bollywood , fight, real or fictional).
 It makes a guess about the character.
