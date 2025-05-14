@@ -1,166 +1,57 @@
-Sure! Below is the **continued and completed version** of your `README.md`, with everything explained in a clear, complete way.
+Akinator Mind Game
+Akinator Mind Game is a fun guessing game made with Streamlit and Q-learning. You think of a character, answer yes-or-no questions, and the app tries to guess who it is. If it’s wrong, you can add the character and their traits to help it learn for next time.
+How It Works
 
----
+Pick a character in your mind (real or made-up).
+The app asks questions about traits, like "Do they have a cape?" or "Can they fly?"
+Using your answers, it guesses the character.
+If it guesses wrong, you can add the right character and their traits to teach the app.
 
-````markdown
-# 🧠 Akinator_MindGame
-
-Akinator_MindGame is a lightweight, interactive guessing game built using **Streamlit** and **Q-learning**. You mentally choose a character from a list, answer yes/no trait-based questions, and the app tries to guess your character based on what it has learned. If it fails, you can teach it!
-
----
-
-## 📌 Features
-
-- 🎮 Interactive trait-based guessing game  
-- 🧠 Reinforcement learning with Q-learning  
-- 🔄 Learns from every game session  
-- 🧑‍🏫 Add new characters with traits dynamically  
-- 📊 View previous game stats  
-- 💾 Local JSON storage for data persistence  
-
----
-
-## 🚀 How to Run
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/Akinator_MindGame.git
-cd Akinator_MindGame
-````
-
-### 2. Install Required Libraries
-
-Make sure Python 3.7 or higher is installed.
-
-Then, install the dependencies:
-
-```bash
-pip install streamlit numpy
-```
-
-> Optionally, create a virtual environment first:
->
-> ```bash
-> python -m venv env
-> source env/bin/activate  # On Windows: env\Scripts\activate
-> ```
-
-### 3. Run the Application
-
-Launch the app with:
-
-```bash
-streamlit run akinator_app.py
-```
-
-The app will open in your browser at `http://localhost:8501`.
-
----
-
-## 📁 Project Structure
-
-```
-Akinator_MindGame/
-│
-├── akinator_app.py         # Main Streamlit application
-├── char.json               # Character database with traits
-├── q_table.json            # Q-values for state-action learning
-├── game_stats.json         # Logs for previous game sessions
-└── README.md               # Project documentation
-```
-
----
-
-## 🧠 How It Works
-
-1. You are shown a list of characters.
-2. You **mentally choose one** character from the list.
-3. The app will ask you up to **7 yes/no questions** about traits.
-4. Based on your answers, it will **guess the character**.
-5. If it fails, you can **teach it** the correct character and its traits.
-6. The model uses **Q-learning** to improve over time.
-
----
-
-## 🧪 Q-Learning Logic
-
-Q-learning is a reinforcement learning algorithm used here to select the best questions to ask based on past outcomes.
-
-* **State**: A dictionary of known answers so far (e.g., `{has_hat: True, brave: False}`)
-* **Action**: A new trait to ask about (e.g., `"has_glasses"`)
-* **Reward**:
-
-  * `10 - 0.5 × num_questions` → if guess is correct
-  * `-5` → if guess is incorrect
-
-### Parameters
-
-* **Learning Rate (α)** = `0.1`
-* **Discount Factor (γ)** = `0.9`
-* **Exploration Rate (ε)** = `0.1` (10% chance of random trait to explore new paths)
-
-The model updates Q-values with:
-
-```python
-Q(s,a) ← Q(s,a) + α × [r + γ × max(Q(s',a')) - Q(s,a)]
-```
-
----
-
-## 🧬 Example Character Entry in `char.json`
-
-```json
+Character Data (char.json)
+The app saves characters and their traits in a file called char.json. Each character has a name and traits marked as true or false. For example:
 {
-  "name": "Iron Man",
-  "has_suit": true,
+  "name": "Batman",
+  "has_cape": true,
   "is_billionaire": true,
-  "flies": true,
-  "has_glasses": false
+  "can_fly": false
 }
-```
 
-You can add characters manually, or through the app interface when the model guesses incorrectly.
+You can add characters by editing this file or by teaching the app when it makes a wrong guess.
+Game Stats (game_stats.json)
+Every game is saved in game_stats.json. It stores:
 
----
+Your answers
+The app’s guess
+If the guess was right
+How many questions were asked
+When the game happened
 
-## 📊 Game Stats
+You can see this info by checking the "Show previous game stats" box in the app.
+Resetting the Game
 
-After each round, the game logs useful details in `game_stats.json`, including:
+To start a new game, click the "Restart Game" button in the app.
+To clear everything (all characters, stats, and learning), delete these files: char.json, q_table.json, and game_stats.json. You can find them in the game’s folder.
 
-* Your answers
-* The app’s guess
-* Whether the guess was correct
-* Number of questions used
-* Timestamp of the session
+Tips for Playing
 
-These stats are shown in-app when you enable the checkbox **"Show previous game stats"**.
+Begin with 3–5 different characters to help the app guess better.
+Use simple, clear traits like "has_hat" or "is_magic".
+Avoid traits that are too specific (like "lives_in_London") or too vague (like "is_awesome").
+The more you play, the smarter the app gets.
 
----
+How to Run
 
-## 🔁 Restarting or Resetting
+Download the game files from the GitHub page to your computer.
+Open the game folder.
+Make sure you have Python and Streamlit installed. If not, ask someone to help you install them.
+Install the needed tools by running this in your terminal or command prompt:
+Type: pip install -r requirements.txt and press Enter.
 
-To restart the game during a session, click the **"🔄 Restart Game"** button in the app.
 
-To reset the model and start fresh (clear all saved data):
+Start the game by running:
+Type: streamlit run main.py and press Enter.
 
-```bash
-del char.json q_table.json game_stats.json  # On Windows
-rm char.json q_table.json game_stats.json  # On Mac/Linux
-```
 
----
 
-## 🧰 Tips for Best Experience
-
-* Start with a few manually added characters for better guessing.
-* The model gets smarter the more you play and teach.
-* Avoid traits that are too vague or too specific.
-
----
-
-## 🙋‍♀️ Created by
-
-**Shruti Brahma**
-Made with ❤️ to help machines guess your thoughts.
-
+Credits
+Made by Shruti Brahma.This game was created to mix AI and fun, letting the app guess your thoughts and improve with every game.
