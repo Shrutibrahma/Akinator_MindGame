@@ -1,4 +1,4 @@
-Akinator Mind Game
+# Akinator Mind Game
 Akinator Mind Game is a fun guessing game made with Streamlit and Q-learning. You think of a character, answer yes-or-no questions, and the app tries to guess who it is. If it’s wrong, you can add the character and their traits to help it learn for next time.
 How It Works
 
