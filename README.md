@@ -36,4 +36,4 @@ How to Run
 - Run the game: Type streamlit run main.py, press Enter.
 
 Credits
-Developed by Shruti Brahma. 
+Developed by Shruti Brahma and Sakshi Shergar
